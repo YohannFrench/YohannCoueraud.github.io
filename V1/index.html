@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mon site</title>
+
+<!---CSS---->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> <!--téléchargement bulma-->
+	<link rel="stylesheet" type="text/css" href="src/css/main.css">
+<!---CSS--->
+
+<!---Font   Aller sur google font pour télécharger les fonts sympas--->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/f27becc446.js" crossorigin="anonymous"></script><!--télécharger icone-->
+<!----Font---->
+
+</head>
+
+
+<body>
+	<!--header-->
+	<div class="block">
+		<header class="header">
+			<a href="#" class="header-logo"> Mon logo</a>
+			<nav class="header-menu">
+				<a href="index.html">Accueil</a>
+				<a href="#">A propos</a>
+				<a href="mesprojets.html">Mes projets</a>
+				<a href="#">Contact</a>
+			</nav>
+		</header>
+	</div>
+	<!--header-->
+
+	<!--banner-->
+	<div class="block">
+		<div class="banner">
+			<img src="src/img/bg2.jpg" class="banner-image" alt="personne qui travaille sur un ordinateur">
+			<div class="banner-content">
+				<h1 class="title is-1">Bienvenue sur mon portfolio</h1>
+				<h2 class="subtitle ">Venez découvrir <a href="mesprojets.html">mes projets !</a></h2>
+				<button class="button">Contactez-moi</button>
+			</div>
+		</div>
+	</div>
+	<!--banner-->
+
+	<!--A propos de moi-->
+	<div class="block">
+		<h2 class="subtitle heading-site">A propos</h2>
+		<div class="container about"> <!--class container propriété de Bulma-->
+			<div class="columns">
+				<div class="column about-single-element"> <!--class column propriété de Bulma-->
+					<i class="fa-solid fa-user"></i>
+					<p>
+						Bonjour, je m'appelle Yohann Coueraud. Je suis en pleine apprentissage de développement web et mobiles en HTML, CSS, JavaScript. Ces différents projets me permettent d'acquérir les compétences nécéssaires afin de prouver que je suis le profil adéquat pour votre entreprise.
+					</p>
+				</div>
+				<div class="column about-single-element">
+					<i class="fa-solid fa-mug-hot"></i>
+					<p>
+						J'aime rencontré de nouvelles personnes, curieux de connaître leur expérience afin d'en savoir plus sur le métier.
+					</p>
+				</div>
+				<div class="column about-single-element">
+					<i class="fa-solid fa-futbol"></i>
+					<p>Adepte de sport en équipe comme le football, ce qui m'a permis d'acquérir un esprit d'équipe.</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--A propos de moi-->
+
+	<!--Mon portfolio-->
+	<div class="tile is-ancestor">
+		<div class="container">
+			<h2 class="subtitle heading-site">Mon portfolio</h2>
+			<div class="tile is-vertical">
+				<div class="tile about">
+					<div class="tile is-parent is-vertical">
+						<article class="tile is-child notification is-warning">
+							<a href="#" target="_blank"><img src="src/img/4L.png">
+							</a>
+						</article> 
+					</div>
+					<div class="tile is-parent">
+						<article class="tile is-child box">
+							<!-- Put any content you want -->
+						</article>
+					</div>
+				</div>
+				<div class="tile">
+					<div class="tile is-parent is vertical">
+						<article class="tile is-child box">
+						Projet de 3ème année : Site descriptif des Renault 4L <br>
+						Front : HTML,CSS,JavaScript - Back : PHP - Database : MySQL
+						</article>
+					</div>
+					<div class="tile is-parent">
+						<article class="tile is-child box">
+							<!-- Put any content you want -->
+						</article>
+					</div>
+				</div>  
+			</div>
+			<!---<div class="tile is-parent">
+				<article class="tile is-child box">-->
+					<!-- Put any content you want -->
+				<!--</article>
+			</div>-->
+		</div>
+	</div>    
+	<!--Mon portfolio-->
+
+	<!--Footer-->
+	<div class="footer">
+		<div class="container">
+			<h2 class="subtitle heading-site">Me contacter !</h2>
+			<form>
+				<input class="input" type="text" placeholder="Votre nom" required><br><br>
+				<input class="input" type="text" placeholder="Votre prénom" required><br><br>
+				<input class="input" type="email" placeholder="Votre adresse mail" required><br><br>
+				<textarea class="textarea" name="message" placeholder="Votre message" required></textarea><br><br>
+				<button class="button is-link">Envoyez</button>
+			</form>
+		</div>
+		<div class="container info">
+			<p>92130, Issy-Les-Moulineaux<br> 
+				Mobile : 06 52 11 12 52</p><br>
+			<ul>
+				<li>
+					<a href="https://www.facebook.com/yohann.coueraud" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/yohann-coueraud-800558197/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--Footer-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="src/js/main.js"></script>
+</body>
+</html>
