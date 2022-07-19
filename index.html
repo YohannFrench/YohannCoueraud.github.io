@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <html>
 <head>
 	<meta charset="utf-8">
@@ -15,6 +15,13 @@
 	<script src="https://kit.fontawesome.com/f27becc446.js" crossorigin="anonymous"></script><!--télécharger icone-->
 <!----Font---->
 
+<!--Meta-->
+	<meta name="description" content="Portfolio de Yohann Coueraud, venez découvrir ses projets site web, informatique">
+	<meta name="keyword" content="Portfolio, webdesign, webdevelopper, front-end">
+<!--Meta-->
+<!--Responsive-->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+<!--Responsive-->
 </head>
 
 
@@ -22,32 +29,72 @@
 	<!--header-->
 	<div class="block">
 		<header class="header">
-			<a href="#" class="header-logo"> Mon logo</a>
+			<nav class="navbar own_nav" role="navigation" aria-label="dropdown navigation">
+				<div class="navbar-item has-dropdown is-hoverable own_item is-link">
+				  <a class="navbar-link">
+					Menu
+				  </a>
+			  
+				  <div class="navbar-dropdown">
+					<a class="navbar-item" href="#banner">
+					  Accueil
+					</a>
+					<a class="navbar-item" href="#a_propos">
+					  A propos
+					</a>
+					<a class="navbar-item" href="#mes_projets">
+					  Mes projets
+					</a>
+					<a class="navbar-item" href="#contact">
+					  Contact  
+					</a>
+				  </div>
+				</div>
+			</nav>
 			<nav class="header-menu">
-				<a href="index.html">Accueil</a>
-				<a href="#">A propos</a>
-				<a href="mesprojets.html">Mes projets</a>
-				<a href="#">Contact</a>
+				<a href="#banner">Accueil</a>
+				<a href="#a_propos">A propos</a>
+				<a href="#mes_projets">Mes projets</a>
+				<a href="#contact">Contact</a>
 			</nav>
 		</header>
 	</div>
 	<!--header-->
 
 	<!--banner-->
-	<div class="block">
+	<div id="banner" class="block">
 		<div class="banner">
 			<img src="src/img/bg2.jpg" class="banner-image" alt="personne qui travaille sur un ordinateur">
 			<div class="banner-content">
 				<h1 class="title is-1">Bienvenue sur mon portfolio</h1>
-				<h2 class="subtitle ">Venez découvrir <a href="mesprojets.html">mes projets !</a></h2>
-				<button class="button">Contactez-moi</button>
+				<h2 class="subtitle ">Venez découvrir <a href="#mes_projets">mes projets !</a></h2>
+				<button class="button"><a class="contactez_moi" href="#contact">Contactez-moi</a></button>
 			</div>
 		</div>
 	</div>
 	<!--banner-->
 
+		<!--modal-->
+		<!--Bulma modal-->
+		<div class="modal own_modal" id="our_modal">
+			<div class="modal-background"></div>
+			<div class="modal-card">
+			  <header class="modal-card-head">
+				<p class="modal-card-title">Modal title</p>
+				<button class="delete" aria-label="close" id="close_modal"></button>
+			  </header>
+			  <section class="modal-card-body">
+				<!-- Content ... -->
+			  </section>
+			  <footer class="modal-card-foot">
+				<button class="button is-link">Envoyez</button>
+			  </footer>
+			</div>
+		  </div>
+		<!--modal-->
+
 	<!--A propos de moi-->
-	<div class="block">
+	<div id="a_propos" class="block">
 		<h2 class="subtitle heading-site">A propos</h2>
 		<div class="container about"> <!--class container propriété de Bulma-->
 			<div class="columns">
@@ -74,7 +121,7 @@
 	<!--A propos de moi-->
 
 	<!--Mon portfolio-->
-	<div class="tile is-ancestor">
+	<div id="mes_projets" class="tile is-ancestor">
 		<div class="container">
 			<h2 class="subtitle heading-site">Mon portfolio</h2>
 			<div class="tile is-vertical">
@@ -115,15 +162,15 @@
 	<!--Mon portfolio-->
 
 	<!--Footer-->
-	<div class="footer">
+	<div id="contact" class="footer">
 		<div class="container">
 			<h2 class="subtitle heading-site">Me contacter !</h2>
 			<form>
-				<input class="input" type="text" placeholder="Votre nom" required><br><br>
-				<input class="input" type="text" placeholder="Votre prénom" required><br><br>
-				<input class="input" type="email" placeholder="Votre adresse mail" required><br><br>
-				<textarea class="textarea" name="message" placeholder="Votre message" required></textarea><br><br>
-				<button class="button is-link">Envoyez</button>
+				<input id="name" class="input" type="text" placeholder="Votre nom" name="name" required><br><br>
+				<input id="firstname" class="input" type="text" placeholder="Votre prénom" name="firstname" required><br><br>
+				<input id="email" class="input" type="email" placeholder="Votre adresse mail" name="email" required><br><br>
+				<textarea id="message" class="textarea" placeholder="Votre message" name="message" required></textarea><br><br>
+				<button class="button is-link" id="send_email">Envoyez</button>
 			</form>
 		</div>
 		<div class="container info">

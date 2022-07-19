@@ -4,17 +4,18 @@
 	margin-right: 0;
 	height: 70px;
 	line-height: 70px;
-	background: rgba(0,0,0,0);
+	background: rgb(232, 156, 3);
+	border:#0091ff solid 2px;
 	position: fixed; /*fixer la position pour suivre le scroll*/
 	top: 0; /* Place en 0 le header*/
 	z-index: 999;
 }
 
-.header a.header-logo{
-	color: #FFFFFF;
+.header nav.own_nav{
 	font-family: 'Montserrat', sans-serif;
 	float: left; /*Place à gauche le logo*/
 	margin-left: 30px;
+	margin-top: 5px;
 }
 
 .header nav.header-menu{
@@ -25,6 +26,7 @@
 .header nav.header-menu a{
 	margin-right: 30px;
 	color: #FFFFFF;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .header nav.header-menu a:hover{
@@ -60,12 +62,19 @@
 	color: #fffb00;
 }
 .button{
-	color: #FFFFFF;
 	background-color:#0091ff;
 }
 .button:hover{
 	color: #FFFFFF;
 	background-color: orange;
+}
+
+.contactez_moi{
+	color: #FFFFFF;
+}
+
+.contactez_moi:hover{
+	color: #FFFFFF;
 }
 
 /*about*/
@@ -121,4 +130,13 @@ div.tile.is-ancestor{
 	display: inline-block;
 	list-style-type: none;
 	text-decoration: none;
+}
+
+/*MODAL*/
+.own_modal{
+	top: 50px;
+}
+
+body{
+	background-color: lightgrey;
 }
