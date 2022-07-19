@@ -78,6 +78,9 @@
 }
 
 /*about*/
+#a_propos{
+	padding: 30px 0 30px 0;
+}
 h2.subtitle.heading-site{
 	text-align: center;
 	font-family: 'Montserrat', sans-serif; 
@@ -98,6 +101,11 @@ h2.subtitle.heading-site{
 }
 
 /*Mon portfolio*/
+#mes_projets{
+	padding: 30px 0 30px 0;
+	border: solid 3px;
+}
+
 h2.subtitle.heading-site{
 	text-align: center;
 	font-family: 'Montserrat', sans-serif; 
@@ -113,12 +121,14 @@ div.tile.is-ancestor{
 }
 
 /*Footer*/
-.footer{
-	margin-top: 70px;
+.demand{
+	background-color: rgb(255, 255, 255);
+	padding: 30px 30px 30px 30px;
+	margin-top: -12px;
 }
 
 .container.info{
-	margin-top: 20px;
+	margin-top: 0px;
 	text-align: center;
 }
 
