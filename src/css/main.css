@@ -3,34 +3,59 @@
 	margin-left: 0;
 	margin-right: 0;
 	height: 70px;
-	line-height: 70px;
-	background: rgb(232, 156, 3);
-	border:#0091ff solid 2px;
+	line-height: 75px;
+	background: #0091ff;
 	position: fixed; /*fixer la position pour suivre le scroll*/
 	top: 0; /* Place en 0 le header*/
 	z-index: 999;
 }
 
-.header nav.own_nav{
-	font-family: 'Montserrat', sans-serif;
-	float: left; /*Place à gauche le logo*/
-	margin-left: 30px;
-	margin-top: 5px;
-}
-
 .header nav.header-menu{
-	float: right; /*Place à droite le menu*/
-	margin-right: 30px;
+	overflow: hidden;
 }
 
 .header nav.header-menu a{
-	margin-right: 30px;
+	display: inline-block;
+	float: none;
+	position: relative;
+	top: -4px;
+	height: 70px;
+	padding: 0px 30px 0 30px;
 	color: #FFFFFF;
 	font-family: 'Montserrat', sans-serif;
 }
 
 .header nav.header-menu a:hover{
-	color: #3498db;
+	color: orange;
+}
+
+.header nav.header-menu a.icon{
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.header nav.header-menu a:not(:first-child) {display: none;}
+	.header nav.header-menu a.icon {
+	  display: block;
+	  float: right;
+	}
+  }
+
+@media screen and (max-width: 600px){
+	.header nav.header-menu.responsive{position: relative;}
+	.header nav.header-menu.responsive a.icon{
+		position: absolute;
+		right: 0;
+		top: -4px;
+	}
+	.header nav.header-menu.responsive a{
+		display: block;
+		float: none;
+		text-align: left;
+	}
+	.header nav.header-menu.responsive a:not(:first-child,:last-child){
+		background-color: green;
+	}
 }
 
 /*banner*/
@@ -101,23 +126,34 @@ h2.subtitle.heading-site{
 }
 
 /*Mon portfolio*/
-#mes_projets{
+#mes_projets{ 
 	padding: 30px 0 30px 0;
-	border: solid 3px;
+	background-color: bisque;
+}
+.grid{
+	display: grid;
+	grid-template: repeat(1,1fr)/1fr 1fr 1fr;
+	gap: 5px;
 }
 
-h2.subtitle.heading-site{
-	text-align: center;
-	font-family: 'Montserrat', sans-serif; 
+.grid-item{
+	display: flex;
+	justify-content: center;
+	padding: 10px;
 }
 
-div.tile.is-ancestor{
-    margin-top: 70px;
+#two{
+	background-color: rgb(237, 235, 235);
+	border-radius: 10px;
+	border: 2px solid;
+}
+#info2{
+	background-color: rgb(237, 235, 235);
 }
 
-.tile.is-child.notification.is-warning a img{
-	width: 70%;
-	margin-left: 90px;
+#descript2{
+	color : black;
+	font-size: 22px;
 }
 
 /*Footer*/

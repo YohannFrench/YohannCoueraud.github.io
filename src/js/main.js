@@ -1,3 +1,16 @@
+//HEADER-MENU
+
+function toggleMenu(){
+	var x = document.getElementById("MyHeaderMenu");
+	if (x.className === "header-menu") {
+		x.className += " responsive"
+	}
+	else {
+		x.className ="header-menu"
+	}
+} 
+
+//MODAL
 $(document).ready(function(){
     //click on button "open_modal"
     $('#open_modal').click(function() {
