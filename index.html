@@ -3,17 +3,22 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Mon site</title>
+	<title>Yohann Coueraud</title>
 
 <!---CSS---->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> <!--téléchargement bulma-->
 	<link rel="stylesheet" type="text/css" href="src/css/main.css">
 <!---CSS--->
 
-<!---Font   Aller sur google font pour télécharger les fonts sympas--->
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<!---icone--->
 	<script src="https://kit.fontawesome.com/f27becc446.js" crossorigin="anonymous"></script><!--télécharger icone-->
 <!----Font---->
+
+<!--FONT-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+
 
 <!--Meta-->
 	<meta name="description" content="Portfolio de Yohann Coueraud, venez découvrir ses projets site web, informatique">
@@ -27,60 +32,47 @@
 
 <body>
 	<!--header-->
-	<div class="block">
-		<header class="header">
-			<nav class="header-menu" id="MyHeaderMenu">
-				<a href="#banner">Accueil</a>
-				<a href="#a_propos">A propos</a>
-				<a href="#mes_projets">Mes projets</a>
-				<a href="#contact">Contact</a>
-				<a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-					<i class="fa-solid fa-bars"></i>
-				</a>
-			</nav>
-		</header>
-	</div>
+	<header class="header">
+		<div class="logo">
+			<a href="#banner"><img src="src/img/cercleY.png" alt="circle"></a>
+		</div>
+		<nav class="header-menu" id="MyHeaderMenu">
+			<a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+				<i class="fa-solid fa-bars"></i>
+			</a>
+			<a href="#a_propos">About</a>
+			<a href="#mes_projets">My projects</a>
+			<a href="#contact">Contact</a>
+		</nav>
+	</header>
 	<!--header-->
 
+	<main>
 	<!--banner-->
 	<div id="banner" class="block">
 		<div class="banner">
-			<img src="src/img/bg2.jpg" class="banner-image" alt="personne qui travaille sur un ordinateur">
+			<div class="banner-image">
+				<img src="src/img/yohann3.png" alt="yohann">
+			</div>
 			<div class="banner-content">
-				<h1 class="title is-1">Bienvenue sur mon portfolio</h1>
-				<h2 class="subtitle ">Venez découvrir <a href="#mes_projets">mes projets !</a></h2>
-				<button class="button"><a class="contactez_moi" href="#contact">Contactez-moi</a></button>
+				<h1 class="mb-4 has-text-weight-bold">Junior web developper</h1>
+				<h3 class="mb-4 has-text-weight-medium">I'm Yohann, engineer student from Paris. </h3>
+				<h3 class="mb-4 has-text-weight-medium">Come discover <a href="#mes_projets">my projects !</a></h3>
+				<div class="contactez-moi">
+					<button class="button"><a class="contactez_moi" href="#contact">Contact me</a></button>
+				</div>
 			</div>
 		</div>
 	</div>
 	<!--banner-->
 
-		<!--modal-->
-		<!--Bulma modal-->
-		<div class="modal own_modal" id="our_modal">
-			<div class="modal-background"></div>
-			<div class="modal-card">
-			  <header class="modal-card-head">
-				<p class="modal-card-title">Modal title</p>
-				<button class="delete" aria-label="close" id="close_modal"></button>
-			  </header>
-			  <section class="modal-card-body">
-				<!-- Content ... -->
-			  </section>
-			  <footer class="modal-card-foot">
-				<button class="button is-link">Envoyez</button>
-			  </footer>
-			</div>
-		  </div>
-		<!--modal-->
-
 	<!--A propos de moi-->
 	<div id="a_propos" class="block">
-		<h2 class="subtitle heading-site">A propos</h2>
+		<h2 class="has-text-centered">About</h2>
 		<div class="container about"> <!--class container propriété de Bulma-->
 			<div class="columns">
 				<div class="column about-single-element"> <!--class column propriété de Bulma-->
-					<i class="fa-solid fa-user"></i>
+				<i class="fa-solid fa-user"></i>
 					<p>
 						Bonjour, je m'appelle Yohann Coueraud. Je suis en pleine apprentissage de développement web et mobiles en HTML, CSS, JavaScript. Ces différents projets me permettent d'acquérir les compétences nécéssaires afin de prouver que je suis le profil adéquat pour votre entreprise.
 					</p>
@@ -103,26 +95,32 @@
 
 	<!--Mon portfolio-->
 	<div id="mes_projets">
-		<h2 class="subtitle heading-site">Mes projets</h2>
+		<h2 class="has-text-centered">My projects</h2>
 		<div class="grid">
-			<div class="grid-item"></div>
-			<div id="two" class="tile is-parent">
-				<article id="info2" class="tile is-child notification is-info">
-					<p id="descript2" class="title">Mon premier projet en HTML, CSS, PHP, Wampserver</p>
-					<p class="subtitle"><a class="button is-primary" href="https://github.com/YohannFrench/Renault4L.git" target="_blank">Lien</a></p>
-					<figure id="figure2" class="image is-1by1">
-						<img class="has-ratio" width="250" height="250" src="src\img\4L.png">
-					</figure>
+			<div class="grid-item">
+				<article class="article">
+					<div class="info has-text-centered">
+						<img class="has-ratio" width="350" src="src\img\4L.png">
+					</div>
+					<div class="p-2">
+						<p class="descript mt-2 mb-4">My first project in HTML, CSS, PHP and Wampserver</p>
+						<div class="has-text-centered my-2"><a class="button is-primary is-small" href="https://github.com/YohannFrench/Renault4L.git" target="_blank">Github</a></div>
+					</div>
 				</article>
 			</div>
 			<div class="grid-item"></div>
+			<div class="grid-item">
+
+			</div>
 		</div>
 	</div>
 
 	<!--Mon portfolio-->
+	</main>
+
 
 	<!--Footer-->
-	<div id="contact" class="demand">
+	<!--<div id="contact" class="demand">
 		<div class="container">
 			<h2 class="subtitle heading-site">Me contacter !</h2>
 			<form>
@@ -145,7 +143,7 @@
 				</li>
 			</ul>
 		</div>
-	</div>
+	</div>-->
 	<!--Footer-->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
