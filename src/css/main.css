@@ -140,13 +140,18 @@ main{
 
 .banner-content h3 a{
 	font-size: var(--H3-2);
-	font-weight: medium;
+	font-weight: 500;
 	color: #0091ff;
 }
 
 .banner-content h3 a:hover{
 	color: #0463fb;
 }
+
+.banner-content h3 a.icam{
+	color: #ffa500;
+}
+
 .button{
 	background-color:#0091ff;
 }
@@ -191,30 +196,55 @@ h3.subtitle.heading-site{
 }
 .grid{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(8, 1fr);
 	gap: 5px;
+}
+
+.grid-item{
+	grid-column: span 4;
+}
+
+.grid-item:nth-child(3n){
+	grid-column: 3/7;
 }
 
 .grid-item{
 	display: flex;
 	justify-content: center;
+	text-align: center;
 	padding: 10px;
 }
 
 .article{
-	z-index: 1;
+	display: grid;
+	grid-template-rows: minmax(100px, 440px) 1fr;
+	width: 450px;
 	border-radius: 10px;
 	border: 2px solid;
 	box-shadow: 14px 15px 20px 15px rgb(0 0 0 / 25%);
 }
 .info{
-	background-color: rgb(237, 235, 235);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
 	border-radius: 10px 10px 0 0;
+}
+
+.grid-item:nth-child(1) .info{
+	background-color: rgb(237, 235, 235);
 }
 
 .descript{
 	color : black;
 	font-size: var(--p-2);
+}
+
+.image_zoom{
+	display: block;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
 }
 
 /*Footer*/
