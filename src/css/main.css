@@ -32,7 +32,6 @@ span{font-size: var(--span--2);}
 
 
 body{
-	background-color: #FFFFFF;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -93,9 +92,6 @@ body{
 	display: none;
 }
 
-main{
-	padding: 0 30px;
-}
 /*banner*/
 
 #banner{
@@ -193,6 +189,7 @@ h3.subtitle.heading-site{
 /*Mon portfolio*/
 #mes_projets{ 
 	padding: 30px 0 30px 0;
+	overflow: hidden;
 }
 .grid{
 	display: grid;
@@ -215,14 +212,79 @@ h3.subtitle.heading-site{
 	padding: 10px;
 }
 
+
+.slider{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 70vh;
+	margin-inline: auto;
+	transition: transform 1s ease-in-out;
+	
+}
+.slide{
+	position: absolute;
+	transition: all 1s ease-in-out;
+	scale: 0.5;
+}
+
+.slide[data-status="unknown"]{
+	scale: 0;
+}
+
+.slide[data-status="active"]{
+	scale: 0.75;
+}
+
+.slide[data-status="afterNext"]{
+	transform: translateX(150%);
+}
+
+.slide[data-status="beforeNext"]{
+	transform: translateX(-150%);
+}
+
+.slide[data-status="afterPrevious"]{
+	transform: translateX(-150%);
+}
+
+.slide[data-status="beforePrevious"]{
+	transform: translateX(150%);
+}
+
+@keyframes before {
+	0%{scale: 0; opacity: 0; }
+	75%{scale: 0.25; opacity: 0;}
+	100%{scale: 0.5; opacity: 1;}
+}
+
+@keyframes unknown {
+	0%{scale: 0.5; opacity: 1;}
+	25%{scale: 0.25; opacity: 0;}
+	100%{scale: 0; opacity: 0;}
+}
+
+
+
 .article{
+	height: 100%;
 	display: grid;
-	grid-template-rows: minmax(100px, 440px) 1fr;
+	grid-template-rows: minmax(100px, 425px) 20% 11%;
 	width: 450px;
 	border-radius: 10px;
 	border: 2px solid;
 	box-shadow: 14px 15px 20px 15px rgb(0 0 0 / 25%);
 }
+
+.article img{
+	display: block;
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+}
+
 .info{
 	display: flex;
 	justify-content: center;
@@ -231,20 +293,34 @@ h3.subtitle.heading-site{
 	border-radius: 10px 10px 0 0;
 }
 
-.grid-item:nth-child(1) .info{
-	background-color: rgb(237, 235, 235);
-}
-
 .descript{
 	color : black;
 	font-size: var(--p-2);
 }
 
-.image_zoom{
-	display: block;
-	object-fit: cover;
-	object-position: center;
-	width: 100%;
+.swiper-buttons{
+	text-align: center;
+}
+
+.swiper-buttons > button{
+	margin: 1rem 1rem;
+	font-size: 30px;
+	width: 3.5rem;
+	height: 3.5rem;
+	cursor: pointer;
+	color: #3e8ed0;
+	background-color: #FFFFFF;
+	border: 2px solid #3e8ed0;
+	border-radius: 100%;
+
+}
+
+.swiper-buttons > button:hover{
+	color: #FFFFFF;
+	background-color: #3e8ed0;
+	border: 2px solid #FFFFFF;
+	transition: all 0.3s ease;
+
 }
 
 /*Footer*/
